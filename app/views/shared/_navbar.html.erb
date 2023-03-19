@@ -1,0 +1,40 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <%= link_to "B612", root_path, class:"navbar-brand" %>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-center navbar-content" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <% if params[:action] == "work" %>
+            <%= link_to "Work", "#", class:"nav-link active" %>
+          <% else %>
+            <%= link_to "Work", "#", class:"nav-link" %>
+          <% end %>
+        </li>
+        <li class="nav-item">
+          <% if params[:action] == "services" %>
+            <%= link_to "Services", services_path, class:"nav-link active" %>
+          <% else %>
+            <%= link_to "Services", services_path, class:"nav-link" %>
+          <% end %>
+        </li>
+        <li class="nav-item">
+          <% if params[:action] == "about" %>
+            <%= link_to "About", about_path, class:"nav-link active" %>
+          <% else %>
+            <%= link_to "About", about_path, class:"nav-link" %>
+          <% end %>
+        </li>
+        <li class="nav-item">
+          <% if params[:action] == "contact" %>
+            <%= link_to "Contact", contact_path, class:"nav-link active" %>
+          <% else %>
+            <%= link_to "Contact", contact_path, class:"nav-link" %>
+          <% end %>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
