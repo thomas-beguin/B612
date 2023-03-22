@@ -11,12 +11,15 @@ export default class extends Controller {
 
   hide() {
     this.currentPosition = window.scrollY
-    if (this.currentPosition > this.lastPosition) {
+    if (this.currentPosition == 0) {
+      this.navbarTarget.classList.remove("hide")
+    } else if (this.currentPosition > this.lastPosition) {
       this.navbarTarget.classList.add("hide")
     } else {
       this.navbarTarget.classList.remove("hide")
     }
     this.lastPosition = window.scrollY
+    console.log(this.currentPosition, this.lastPosition)
   }
 
   menu() {
