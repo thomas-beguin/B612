@@ -1,7 +1,22 @@
+.navbar {
+  margin-left: 2vw;
+  margin-right: 2vw;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  position: sticky;
+  top: 0px;
+  background: black;
+  z-index: 1;
+}
+
 .navbar-content {
   margin-right: 40px;
   margin-top: 20px;
   margin-bottom: 20px;
+}
+
+.navbar-brand {
+  color: $light-gray;
 }
 
 .nav-link {
@@ -10,6 +25,7 @@
   padding: 0px !important;
   display: inline-block;
   position: relative;
+  color: $light-gray;
 
   &::after {
     content: '';
@@ -19,9 +35,13 @@
     height: 1px;
     bottom: 0;
     left: 0;
-    background-color: black;
+    background-color: $light-gray;
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
+  }
+
+  &:hover {
+    color: $light-gray;
   }
 
   &:hover::after,
@@ -31,6 +51,7 @@
   }
 
   &.active {
+    color: $light-gray !important;
     &::after {
       transform: scaleX(1);
     }

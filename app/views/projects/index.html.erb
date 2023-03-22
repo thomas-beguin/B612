@@ -1,0 +1,17 @@
+<div style="padding-left: 2vw;
+            padding-right: 2vw;">
+
+  <h5 class="index-title">OUR WORK.</h5>
+
+  <div class="grid-container">
+    <% @projects.each do |project| %>
+      <%= link_to project_path(project), class: "text-decoration-none" do %>
+        <div class="grid-item">
+          <div class="grid-img">
+            <p><%= project.title %></p>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
