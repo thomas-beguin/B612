@@ -10,3 +10,13 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+body {
+  background-color: black !important;
+}
+
+h1, h2, h3, h4, h5, h6, p, span, a {
+  color: $light-gray;
+  padding: 0px;
+  margin: 0px;
+}
