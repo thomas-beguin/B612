@@ -7,6 +7,12 @@
   top: 0px;
   background: black;
   z-index: 1;
+  transform: translateY(0);
+  transition: transform 0.1s ease-in-out;
+}
+
+.hide {
+  transform: translateY(-100%);
 }
 
 .navbar-content {
