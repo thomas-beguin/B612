@@ -4,9 +4,15 @@
      data-action="scroll@window->navbar#hide">
   <div class="container-fluid">
     <%= link_to "B612", root_path, class:"navbar-brand" %>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"
+            data-action="click->navbar#menu">
+      <span class="toggler-icon nav-top"
+            data-navbar-target="toptoggler"></span>
+      <span class="toggler-icon nav-bottom"
+            data-navbar-target="bottomtoggler"></span>
     </button>
+
     <div class="collapse navbar-collapse justify-content-center navbar-content" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
@@ -38,9 +44,9 @@
           <% end %>
         </li>
       </ul>
+      <%= link_to "#" do %>
+        <i class="fa-brands fa-instagram"></i>
+      <% end %>
     </div>
-    <%= link_to "#" do %>
-      <i class="fa-brands fa-instagram"></i>
-    <% end %>
   </div>
 </nav>

@@ -9,6 +9,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 5px;
+  justify-content: center;
 }
 
 .grid-item {
@@ -43,5 +44,17 @@
     p {
       display: block;
     }
+  }
+}
+
+@media (max-width: 1300px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 991px) {
+  .grid-container {
+    grid-template-columns: 1fr;
   }
 }
